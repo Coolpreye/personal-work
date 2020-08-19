@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  :root {
+    --primary-color: #eb6841;
+    --secondary-color: #2f2e41;
+    --tertiary-color: #ffffff;
+    --main-color: #575A89;
+    --submain-color: #c4c4c4;
+  }
+  
+  .home-header {
+    background-image: url(../utils/images/header-image.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .home-header-overlay {
+    height: 85vh;
+    background-color: rgba(0, 0, 0, .5);
+    padding-top: 3em;
+  }
+  
+  .nav {
+    position: fixed;
+    width: 100%;
+    margin-top: -3em;
+  }
+  
+  .nav.sticky {
+    background-color: var(--main-color);
+  }
+  
+  .brand-logo img {
+    width: 20%;
+  }
+  
+  .home-navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 88%;
+    margin: auto;
+    padding: .9em 0;
+  }
+  
+  .hamburger {
+    display: none;
+    color: var(--tertiary-color);
+    cursor: pointer;
+  }
+  
+  .navlinks {
+    display: flex;
+    list-style: none;
+    padding-top: .6em;
+  }
+  
+  .navlinks li {
+    margin-left: .8em;
+  }
+  
+  .navlink {
+    text-decoration: none;
+    color: var(--tertiary-color);
+    transition: color .2s ease-in;
+  }
+  
+  .navlink:hover {
+    color: var(--primary-color);
+  }
+  
+  .nav.sticky .navlink {
+    transition: color .2s ease-in;
+  }
+  
+  .nav.sticky .navlink:hover {
+    color: var(--primary-color);
+  }
+  
+  .hamburger-menu {
+    display: none;
+    position: fixed;
+    top: 2em;
+    right: 3em;
+    padding: 1.5em .5em;
+    background: var(--secondary-color);
+    list-style: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 3px;  
+  }
+
+  .hamburger-menu:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .hamburger-menu li {
+    margin-top: .8em;
+    text-align: center;
+  }
+  
+  .hamburger-menu li .link {
+    text-decoration: none;
+    color: var(--tertiary-color);
+    transition: color .2s ease-in;
+  }
+  
+  .hamburger-menu li .link:hover {
+    color: var(--primary-color);
+  }
+  
+  .home-search-form {
+    margin: 10em auto 3em auto;
+  }
+  
+  .home-search-form h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    width: 80%;
+    margin: 0 auto;
+    color: var(--tertiary-color);
+    text-align: center;
+  } 
+  
+  .home-search-form .form {
+    max-width: 515px;
+    width: 80%;
+    margin: 1.1em auto;
+    background: var(--tertiary-color);
+    border-radius: 10px;
+    display: flex;
+  } 
+  
+  .home-search-form .search {
+    margin-left: .5em;
+    margin-top: .4em;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .home-search-form .form input {
+    border: none;
+    margin-left: .6em;
+    color: var(--secondary-color);
+    font-size: 1rem;
+    padding: .8em 0;
+    width: 80%;
+    background: none;
+  }
+
+/* media queries */
+@media screen and (max-width: 677px) {
+    .brand-logo img {
+      width: 30%;
+    }
+  
+    /* .footer {
+      display: block;
+    }
+  
+    .footer-links {
+      width: 50%;
+      margin: 0 auto;
+    }
+  
+    .normal-links {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .footer-link, .footer-link-1 {
+      text-align: center;
+      margin-top: .6em;
+    }
+  
+    .social-links {
+      max-width: 170px;
+      width: 100%;
+      margin: 1.5em auto;
+    }
+  
+    .foot-form {
+      max-width: 250px;
+      margin: 1em auto;
+    } */
+  }
+  
+  @media screen and (max-width: 929px) {
+    .navlinks {
+      display: none;
+    }
+  
+    .hamburger {
+      display: block;
+    }
+  
+    .hamburger.menu {
+      color: var(--primary-color);
+    }
+  
+    .hamburger-menu.show {
+      display: block;
+    }
+  }
+  
+  /* @media screen and (max-width: 768px) {
+    .cities {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    .second {
+      display: none;
+    }
+  
+  }
+  
+  @media screen and (max-width: 480px) {
+    .cities {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .city {
+      width: 88%;
+    }
+  } */
